@@ -1,0 +1,15 @@
+#map_canvas {
+  width: auto;
+   height: 500px;}
+   .logo{
+     font-family: 'Satisfy', cursive;
+     font-size: 36px;
+   }
+   .nav{
+     font-family: 'Old Standard TT', serif;
+     font-size: 20px;
+   }
+   .marca{
+     font-family: 'Old Standard TT', serif;
+     font-size: 40px;
+   }

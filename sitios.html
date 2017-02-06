@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Sitios de interés</title>
+      <link rel="icon" href="imagenes/mx.png">
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAW9qewYxzPu0kbYyEtGl15goj5PzT8gOA&callback=initMap"></script>
+        <!-- ________________________________________________________________________________________________________________-->
+        <script type="text/javascript" src="http://mapas.inegi.org.mx/espacioyd_map/query?request=Json&var=geeServerDefs"></script>
+        <script type="text/javascript" src="http://www.beta.inegi.org.mx/servicios/scripts/capas_inegi.js"></script>
+        <script type="text/javascript" src="http://www.beta.inegi.org.mx/servicios/scripts/fusion_map_obj_v3.js"></script>
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="css/materialize.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="logo" href="imagenes/Mexico.png">
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+    </head>
+    <body onload="inicializa();">
+      <nav class="blue-grey lighten-1">
+        <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo center"><img src="imagenes/mx.png" alt=""></a>
+          <ul class="left hide-on-med-and-down">
+            <li ><a href="index.html" class="logo">Vive México</a></li>
+          </ul>
+          <a href="#" data-activates="mobile-demo" class="button-collapse "><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li ><a href="division.html" class="nav">División territorial</a></li>
+            <li ><a href="Vias.html" class="nav">Vías de comunicación</a></li>
+            <li class="active"><a href="sitios.html" class="nav">Sitios de interés</a></li>
+          </ul>
+          <ul class="side-nav light-blue darken-3" id="mobile-demo">
+            <li><a href="index.html" class="logo active">Vive México</a></li>
+            <li><a href="divison.html" class="nav">División territorial</a></li>
+            <li><a href="Vias.html" class="nav">Vías de comunicación</a></li>
+            <li><a href="sitios.html" class="nav">Sitios de interés</a></li>
+          </ul>
+        </div>
+    </nav>
+        <div class="row">
+           <div class="col s12 m4 l3 blue-grey lighten-5">
+             <div class="col offset-m1 m10">
+                 <h4 class="center">Selecciona la información que desea mostrar sobre el mapa</h4>
+
+                 <!-- Como ejemplo se muestran las siguientes tres capas, para ver todas las capas disponibles visita la siguiente ruta: http://www.beta.inegi.org.mx/servicios/api_google_maps.html -->
+
+                 <h5>Sitios de interés</h5>
+                 <form action="#">
+                   <p>
+                     <input type="checkbox" id="test1" onclick="enciendeApagaCapa('1189');" />
+                     <label for="test1">Zonas arqueológicas</label>
+                   </p>
+                   <p>
+                     <input type="checkbox" id="test2" onclick="enciendeApagaCapa('1190');" />
+                     <label for="test2">Zonas culturales</label>
+                   </p>
+                   <p>
+                     <input type="checkbox" id="test3" onclick="enciendeApagaCapa('1191');" />
+                     <label for="test3">Zonas protegidas</label>
+                   </p>
+                   <p>
+                     <input type="checkbox" id="test4" onclick="enciendeApagaCapa('1192');" />
+                     <label for="test4">Volcanes</label>
+                   </p>
+                 </form>
+                 <hr>
+                 <div>
+                    <p>*Nota: para visualizar algunas capas es necesario hacer Zoom sobre el mapa.</p>
+                 </div>
+             </div>
+            </div>
+          <div class="col s12 m8 l9 center">
+            <div id="map_canvas"></div>
+          </div>
+          </div>
+          <footer class="page-footer blue-grey lighten-1">
+               <div class="container">
+                 <div class="row">
+                   <div class="col m9 s12">
+                     <h5 class="grey-text text-lighten-4">Contacto</h6>
+                       <h6 class="grey-text text-lighten-4">Sitio elavorado por:</h6>
+                     <h6 class="grey-text text-lighten-4">Kevin Osmar Meneses Cornejo</h6>
+                   </div>
+                   <div class="col m3">
+                     <div class="row espaciorow">
+                         <a class="waves-effect waves-light btn grey lighten-3" href="https://github.com/MenesesCKevin/dise-oWebAvanzado" target="_blank"><img class="responsive-img" src="imagenes/git.ico" alt="" ><span class="black-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Git Hub</span></a>
+                     </div>
+                       <div class="row espaciorow">
+                           <a class="waves-effect waves-light btn grey lighten-3" href="https://www.facebook.com/kev.osmar" target="_blank"><img class="responsive-img" src="imagenes/facebook.ico" alt="" ><span class="black-text">&nbsp;&nbsp;Facebook</span></a>
+                       </div>
+                       <div class="row espaciorow">
+                         <a class="waves-effect waves-light btn grey lighten-3" href="https://twitter.com/kevinosmar" target="_blank"><img class="responsive-img" src="imagenes/twitter.ico" alt="" ><span class="black-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Twitter</span></a>
+                       </div>
+                   </div>
+                 </div>
+               </div>
+             </footer>
+
+
+        <script type="text/javascript" src="js/jquery.min.js"></script>
+         <script type="text/javascript" src="js/materialize.min.js"></script>
+         <script type="text/javascript" src="js/app.js"></script>
+    </body>
+
+</html>
